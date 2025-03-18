@@ -12,6 +12,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { View } from "@react-three/drei";
 import Scene from "./Scene";
+import { Bubbles } from "./Bubbles";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -63,9 +64,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
     scrollT1
       .fromTo("body", {
-        backgroundColor: "#FDE047",
-      }, {
         backgroundColor: "#D9F99D",
+      }, {
+        backgroundColor: "#FDE047",
         overwrite: "auto",
       }, 1)
       .from(".text-side-heading .split-char", {
@@ -93,6 +94,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     >
       <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
         <Scene />
+        <Bubbles count={300} speed={2} repeat={true} />
       </View>
       <div className="grid">
         <div className="grid h-screen place-items-center">
