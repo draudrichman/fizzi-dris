@@ -12,6 +12,7 @@
     }
   }
   --animate-slide-left: slide-left 2s ease-in-out infinite;
+  --animate-spin-slow: spin 6s linear infinite;
 
   --color-mint-500: oklch(0.72 0.11 178);
 }
